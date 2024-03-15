@@ -30,7 +30,7 @@ export function DynamicAnalysis({
             formData.append('file', file);
             const fileName = file.name;
             const response = await axios.post(
-                'http://localhost:8000/uploadfile',
+                process.env.NEXT_PUBLIC_API_URL + '/uploadfile',
                 formData,
                 {}
             );
